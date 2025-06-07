@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
 
         <h1 className="hero-title">
           <span className="title-line">Inicia tu</span>
-          <span className="title-line cosmic-text">Viaje Cósmico</span>
+          <span className="title-line">Viaje Cósmico</span>
           <span className="title-line">Hacia lo Desconocido</span>
         </h1>
 
