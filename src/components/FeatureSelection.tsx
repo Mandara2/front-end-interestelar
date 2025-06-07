@@ -8,6 +8,10 @@ const FeatureSelection: React.FC = () => {
     navigate('/')
   }
 
+  const handleUniverseMapSimulation = () => {
+    navigate('/universe-map-simulation')
+  }
+
   return (
     <div className="feature-selection">
       <div className="stars-background">
@@ -57,7 +61,7 @@ const FeatureSelection: React.FC = () => {
               <span className="feature-tag">Navegación Espacial</span>
               <span className="feature-tag">Mapeo Cósmico</span>
             </div>
-            <button className="card-button">
+            <button className="card-button" onClick={handleUniverseMapSimulation}>
               <span>Iniciar exploración</span>
               <div className="button-glow"></div>
             </button>
