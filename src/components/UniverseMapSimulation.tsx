@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UniverMapService } from '../services/UniverseMapService'
 import UniverseMap from '../data/UniverseMap.json'
+import  BackButton from './BackButton'	
 
 const UniverseMapSimulation = () => {
     const [simulationResult, setSimulationResult] = useState<any>(null)
@@ -17,7 +18,7 @@ const UniverseMapSimulation = () => {
   UniverMapService.startSimulation(UniverseMap)
     .then((response) => {
       const path = response.camino
-      let delay = 500 // milisegundos entre pasos, personalizable
+      let delay = 200 // milisegundos entre pasos, personalizable
 
       path.forEach((coord, index) => {
         setTimeout(() => {
@@ -78,9 +79,7 @@ const UniverseMapSimulation = () => {
         <div className="shooting-star"></div>
         <div className="shooting-star"></div>
       </div>
-        <button className="back-button" onClick={handleBackFeatureSelection}>
-          ← Volver a la selección de funciones
-        </button>
+        <BackButton text="Volver a selección de características" onClick={handleBackFeatureSelection} />
 
         <h2 className="map-title">Mapa Interestelar</h2>
 <h4 className="map-subtitle">

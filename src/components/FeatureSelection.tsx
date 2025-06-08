@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import BackButton from './BackButton'
 
 const FeatureSelection: React.FC = () => {
   const navigate = useNavigate()
@@ -10,6 +11,10 @@ const FeatureSelection: React.FC = () => {
 
   const handleUniverseMapSimulation = () => {
     navigate('/universe-map-simulation')
+  }
+
+  const handleAFDVerification = () => {
+    navigate('/afds')
   }
 
   return (
@@ -39,9 +44,7 @@ const FeatureSelection: React.FC = () => {
       </div>
 
       <div className="feature-header">
-        <button className="back-button" onClick={handleBackHome}>
-          ← Volver al inicio
-        </button>
+        <BackButton text="Volver al inicio" onClick={handleBackHome} />
         <h1 className="feature-title">Elige tu misión</h1>
         <p className="feature-subtitle">Selecciona la herramienta cósmica que se ajusta a tus objetivos de exploración</p>
       </div>
@@ -82,7 +85,7 @@ const FeatureSelection: React.FC = () => {
               <span className="feature-tag">Verificación Gramatical</span>
               <span className="feature-tag">Análisis de Texto</span>
             </div>
-            <button className="card-button">
+            <button className="card-button" onClick={handleAFDVerification}>
               <span>Iniciar verificación</span>
               <div className="button-glow"></div>
             </button>
