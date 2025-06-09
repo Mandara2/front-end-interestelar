@@ -30,17 +30,6 @@ Puedes ver una explicación completa del funcionamiento de la aplicación en el 
 - Muestra errores con explicación y posición del fallo
 - Interfaz educativa clara y retroalimentación inmediata
 
----
-
-## 📁 Estructura del Repositorio
-
-📂 Entregables
-├── 📄 Manual de Usuario (PDF)
-├── 📄 Manual Técnico (PDF)
-├── 📄 AFD_IPv4.json
-└── 📄 AFD_TarjetaCredito.json
-
-
 > En la carpeta `Entregables` encontrarás toda la documentación relevante y las matrices de los dos autómatas utilizados.
 
 ---
